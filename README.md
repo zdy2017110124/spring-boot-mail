@@ -1,4 +1,4 @@
-#### 1.Sping boot 起步
+## 1.Sping boot 起步
 
 这次是通过start.spring.io配置springboot，如图所示，按图中选择，生成一个压缩包，解压在工作目录下。
 
@@ -16,7 +16,7 @@
 
 ![helloworld](pics/helloworld.png)
 
-#### 2.项目配置
+## 2.项目配置
 
 将刚才的helloworld工程复制到工作目录下，重新命名为spring-boot-mail，重复1的过程，将模块导入，然后把该改的文件夹的名字和方法名字都改一下，比如说HelloworldApplication改成MailApplication
 
@@ -28,7 +28,7 @@
 
 ![property](pics/property.png)
 
-#### 3.文本文件
+## 3.文本文件
 
 **请注意：测试类中@Test中的方法访问权限必须是public**
 
@@ -38,15 +38,15 @@
 
 解决方法：把 spring-boot-mail 这个项目 clean 一下，然后再compile 一下，其他不做任何修改，在去执行测试代码即可。在执行Execute Maven Goal输入指令时，注意选好你要执行的working_directory。
 
-#### 4.HTML邮件
+## 4.HTML邮件
 
 执行步骤与3类似
 
-#### 5.附件邮件
+## 5.附件邮件
 
 代码里展现的是发送一个附件，其实可以带多个附件的，代码helper.addAttachment(fileName,file);中，把filepath写成数组遍历，改变filepath并执行多次addAttachment方法即可。
 
-#### 6.图片邮件
+## 6.图片邮件
 
 解释一下cid是怎么回事，以下解释来源于网络：
 
@@ -58,7 +58,7 @@ html语言可以带上图片链接（<img src=”c:/test.jpg”></img>），那�
 
 ![mail](pics/mail.PNG)
 
-#### 7.邮件模板
+## 7.邮件模板
 
 需要加入thymeleaf依赖。
 
@@ -66,7 +66,7 @@ html语言可以带上图片链接（<img src=”c:/test.jpg”></img>），那�
 
 我们利用邮件模板发送类似于注册点击链接激活的邮件，测试类执行后，在收到的邮件中点击链接会跳转到此github上来呦~~
 
-#### 8.异常处理
+## 8.异常处理
 
 以发送图片的邮件方法为例展示了对异常的处理，包括加入日志等，效果如图所示。具体可以看代码。
 
